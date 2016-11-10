@@ -1,0 +1,563 @@
+<html>
+
+<head>
+
+	<!-- Include meta tag to ensure proper rendering and touch zooming -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes">
+
+	<!-- Include jQuery Mobile stylesheets -->
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="css/mobile-app.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/simpledialog2.css" />
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css"  />
+
+	<!-- Include the jQuery library -->
+	<script src="js/jquery-1.11.3.min.js"></script>
+
+	<!-- Include the jQuery Mobile library -->
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+	<!-- highcharts -->
+	<script src="js/highchart.js"></script>
+	<script src="js/exporting.js"></script>
+	<script src="js/simpledialog2.js"></script>
+	<script type="text/javascript" src="js/highchartData.js"></script>
+	<script src="js/addtohomescreen.min.js"></script>
+	<script>
+	addToHomescreen({
+		startDelay: 5,
+		skipFirstVisit: true,
+		maxDisplayCount: 1
+	});
+	</script>
+
+</head>
+
+<body>
+	<div data-role="page" data-title="HybridApps.io" id="hyapps-app-login-page" class="hyapps-header-default hyapps-footer-default hyapps-app-page hyapps-app-font-normal">
+		<div data-role="content" class="" id="hyapps-app-login-page-content">
+			<div class="ui-body ui-body-a ui-corner-all hyapps-app-center hyapps-app-width">
+				<h3>Login</h3>
+				<input data-clear-btn="true" Placeholder="username" type="text" name="txt-email" id="txt-email">
+				<input data-clear-btn="true" Placeholder="password" type="password" name="txt-password" id="txt-password">
+				<a href="#hyapps-app-homepage" data-role="button" data-theme="a" data-inline="true" data-mini="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class="ui-btn ui-shadow ui-btn-corner-all ui-mini ui-btn-inline ui-btn-up-a hyapps-app-blue-button">
+					<span class="ui-btn-inner ui-btn-corner-all">
+						<span class="ui-btn-text">Submit</span>
+					</span>
+				</a>
+			</div>
+			<!--end ui body-->
+
+		</div>
+		<!--end content div-->
+	</div>
+	<!--end login page-->
+	<!--end login page-->
+
+	<div data-role="page" data-title="HybridApps.io" id="hyapps-app-homepage" class=" hyapps-header-default hyapps-footer-default hyapps-app-page hyapps-app-font-normal">
+
+		<div data-role="main" class="hyapps-app-touchableMenu">
+			<div data-role="controlgroup" class="ui-content hyapps-app-list">
+				<a href="#hyapps-app-page-1-homepage" class="ui-btn ui-icon-hyapps-app-piechart ui-btn-icon-left ui-corner-all ui-btn-a">Home</a>
+				<a href="#hyapps-app-about-homepage" class="ui-btn ui-icon-hyapps-app-linegraph ui-btn-icon-left ui-corner-all ui-btn-a">about section</a>
+				<a href="#hyapps-app-products-homepage" class="ui-btn ui-icon-hyapps-app-linechart ui-btn-icon-left ui-corner-all ui-btn-a">products section</a>
+				<a href="#hyapps-app-financialReport-homepage" class="ui-btn ui-icon-hyapps-app-graph ui-btn-icon-left ui-corner-all ui-btn-a"> contact</a>
+
+
+			</div>
+		</div>
+		<!--end main-->
+	</div>
+	<!--end homepage page-->
+	<!-- page one ends here --->
+
+
+	<div data-role="page" id="hyapps-app-page-1-homepage"  data-title="Home" class="hyapps-header-default hyapps-footer-default hyapps-app-page hyapps-app-font-normal">
+		<div data-role="panel" id="hyapps-app-page-1-panel-left" data-dismissible="false" class="hyapps-app-panel-left hyapps-no-border" data-display="overlay" data-theme="a" data-position-fixed="true" data-swipe-close="true" data-position="left">
+		</div><!--end panel-->
+		<div data-role="panel" id="hyapps-app-page-1-panel-right" class="ui-panel-content-wrap-position-right hyapps-app-panel-right" data-display="overlay" data-position="right">
+			<a href="#hyapps-app-page-1-homepage" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+			<ul data-role="listview" id="">
+				<li data-icon="delete"><a href="#hyapps-app-page-1-homepage" data-rel="close" class="hyapps-app-panel-header">Close</a></li>
+				<li data-iconpos="left"><a href="#hyapps-app-page-1-popup" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-btn-icon-left ui-icon-carat-l">page-1 Settings</a></li>
+				<div class="hyapps-page-list"></div><!--dynamic list of pages-->
+			</ul>
+			<div data-role="popup" id="hyapps-app-page-1-popup" data-overlay-theme="a" data-theme="a" data-dismissible="false" class="hyapps-app-popup-box" style="max-width:400px;">
+				<div data-role="header" data-theme="a">
+					<h1>page-1 section Settings</h1>
+				</div>
+				<div role="main" class="ui-content">
+					<!-- <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a> -->
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+					<form>
+						<fieldset data-role="controlgroup">
+							<legend>about Options</legend>
+							<label for="select-native-5">Select one</label>
+							<select name="select-native-5" id="select-native-5" data-mini="true">
+								<option value=""></option>
+								<option value="VV1">lorem ipsum</option>
+								<option value="EIN">option 1</option>
+								<option value="AFL">option 2</option>
+								<option value="AMX">option 3</option>
+								<option value="BER">option 4</option>
+								<option value="ROU">option 5</option>
+								<option value="AEA">option 6</option>
+							</select>
+						</fieldset>
+						<label for="slider-1" class="hyapps-top20">Date range (in weeks)</label>
+						<input type="range" name="slider-1" id="slider-1" min="0" max="6" value="2">
+						<div class="hyapps-app-center hyapps-top15">
+							<a href="#hyapps-page-1-app-homepage" data-role="button" data-theme="a" data-inline="true" data-mini="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class=" ui-btn ui-shadow ui-btn-corner-all ui-mini ui-btn-inline ui-btn-up-a">
+								<span class="ui-btn-inner ui-btn-corner-all ">
+									<span class="ui-btn-text">Go</span>
+								</span>
+							</a>
+						</div>
+						<!--end button-->
+					</form>
+					<!--end range slider-->
+				</div>
+			</div>
+		</div><!--end panel right-->
+		<div data-role="header" data-position="fixed" data-fullscreen="false">
+			<a href="#hyapps-app-page-1-panel-left" class="ui-btn ui-icon-bars ui-corner-all ui-btn-icon-left ui-btn-icon-notext"></a>
+			<a href="#hyapps-app-page-1-panel-right" class="ui-btn ui-corner-all ui-btn-icon-notext ui-icon-gear"></a>
+		</div>
+		<!--end header-->
+		<div data-role="main" class="hyapps-app-padding-sm">
+			<div class="swiper-page-1-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" id="page-1-chart-box-1">
+						<div class="ui-body ui-body-a ui-corner-all hyapps-app-center hyapps-app-chart-box">
+							<div class="hyapps-app-chart-heading-box">
+								<div class="hyapps-app-chart-heading">
+									<h3>some text
+										<span class="hyapps-text-sm hyapps-app-padding-sm">some text</span>
+									</h3>
+								</div><!--end heading-->
+								<div class="hyapps-app-setting-icon">
+									<!-- <img src="images/gear_red_opt.png" alt="" /> -->
+
+									<a href="#hyapps-app-chart-checkbox" data-role="" data-rel="popup" ><img src="images/gear_red_opt.png" alt="" /></a>
+									<div id="hyapps-app-chart-checkbox" data-role="popup" data-transition="slidedown" class="hyapps-app-chart-checkbox hyapps-app-white-bg" data-corners="false">
+										<div class="ui-field-contain">
+											<fieldset data-role="controlgroup" data-corners="false">
+												<input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom">
+												<label for="checkbox-1a">text 1</label>
+
+												<input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom">
+												<label for="checkbox-2a">text 2</label>
+
+												<input type="checkbox" name="checkbox-3a" id="checkbox-3a" class="custom">
+												<label for="checkbox-3a">text 3</label>
+
+												<input type="checkbox" name="checkbox-4a" id="checkbox-4a" class="custom">
+												<label for="checkbox-4a">text 4</label>
+											</fieldset>
+										</div><!--end ui field contain-->
+									</div>	<!--end checkbox-->
+								</div>
+							</div><!--end chart heading-->
+							<div id="page-1-chart-1" class="hyapps-app-chart-box-content"></div>
+						</div><!--end chart box-->
+					</div>
+					<!-- slide 1 ends here -->
+					<div class="swiper-slide" id="page-1-chart-box-2">
+						<div class="ui-body ui-body-a ui-corner-all hyapps-app-center hyapps-app-chart-box">
+							<div class="hyapps-app-chart-heading-box">
+								<div class="hyapps-app-chart-heading">
+									<h3>some text
+										<span class="hyapps-text-sm hyapps-app-padding-sm">some text</span>
+									</h3>
+								</div><!--end heading-->
+							</div><!--end chart heading-->
+							<div id="page-1-chart-2" class="hyapps-app-chart-box-content " ></div>
+						</div><!--end chart box-->
+					</div>
+					<!-- slide 2 ends here -->
+					<div class="swiper-slide" id="page-1-chart-box-3">
+						<div class="ui-body ui-body-a ui-corner-all hyapps-app-center hyapps-app-chart-box">
+							<div class="hyapps-app-chart-heading-box">
+								<div class="hyapps-app-chart-heading">
+									<h3>
+										<span class="hyapps-text-sm hyapps-app-padding-sm"> some text</span>
+									</h3>
+								</div><!--end heading-->
+							</div><!--end chart heading-->
+							<div id="page-1-chart-3" class="hyapps-app-chart-box-content" ></div>
+						</div><!--end chart box-->
+					</div>
+					<!-- slide 3 ends here -->
+					<div class="swiper-slide" id="page-1-chart-box-4">
+						<div class="ui-body ui-body-a ui-corner-all hyapps-app-center hyapps-app-chart-box">
+							<div class="hyapps-app-chart-heading-box">
+								<div class="hyapps-app-chart-heading">
+									<h3>some text
+										<span class="hyapps-text-sm hyapps-app-padding-sm"> some text</span>
+									</h3>
+								</div><!--end heading-->
+							</div><!--end chart heading-->
+							<div id="page-1-chart-4" class="hyapps-app-chart-box-content" ></div>
+						</div><!--end chart box-->
+					</div>
+					<!-- slide 4 ends here -->
+					<div class="swiper-slide" id="page-1-chart-box-5">
+						<div class="ui-body ui-body-a ui-corner-all hyapps-app-center hyapps-app-chart-box">
+							<div class="hyapps-app-chart-heading-box">
+								<div class="hyapps-app-chart-heading">
+									<h3>some text
+										<span class="hyapps-text-sm hyapps-app-padding-sm"> some text</span>
+									</h3>
+								</div><!--end heading-->
+							</div><!--end chart heading-->
+							<div id="page-1-chart-5" class="hyapps-app-chart-box-content" ></div>
+						</div><!--end chart box-->
+					</div>
+					<!-- slide 5 ends here -->
+					<div class="swiper-slide" id="page-1-chart-box-6">
+						<div class="ui-body ui-body-a ui-corner-all hyapps-app-center hyapps-app-chart-box">
+							<div class="hyapps-app-chart-heading-box">
+								<div class="hyapps-app-chart-heading">
+									<h3>some text
+										<span class="hyapps-text-sm hyapps-app-padding-sm"> some text</span>
+									</h3>
+								</div><!--end heading-->
+							</div><!--end chart heading-->
+							<div id="page-1-chart-6" class="hyapps-app-chart-box-content" ></div>
+						</div><!--end chart box-->
+					</div>
+					<!-- slide 6 ends here -->
+				</div><!--swipe wrapper ends here-->
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+			</div><!--swipe container ends here-->
+		</div><!--main ends here-->
+	</div><!--end page-1 homepage page-->
+	<!--page-1 page ends here-->
+
+	<div data-role="page" id="hyapps-app-about-homepage"  data-title="about section" class=" hyapps-header-default  hyapps-footer-default hyapps-app-page hyapps-app-font-normal">
+		<div data-role="panel" id="hyapps-app-about-panel-left" class="hyapps-app-panel-left hyapps-no-border" data-display="overlay" data-theme="a" data-position-fixed="true" data-swipe-close="true" data-position="left">
+		</div>
+		<!--end panel-->
+		<div data-role="panel" id="hyapps-app-about-panel-right" class="ui-panel-content-wrap-position-right hyapps-app-panel-right" data-display="overlay" data-position="right">
+			<!-- <a href="#hyapps-app-page-1-homepage" data-rel="close" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a> -->
+			<ul data-role="listview">
+				<li data-icon="delete"><a href="#hyapps-app-about-homepage" data-rel="close" class="hyapps-app-panel-header">Close</a></li>
+				<!-- <a href="#popupParis" data-rel="popup" data-position-to="window" data-transition="fade"class="ui-btn ui-btn-icon-left ui-icon-carat-l"></a></li> -->
+				<li data-iconpos="left"><a href="#hyapps-app-about-popup" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-btn-icon-left ui-icon-carat-l">about Settings</a></li>
+				<div class="hyapps-page-list"></div><!--dynamic list of pages-->
+
+			</ul>
+			<div data-role="popup" id="hyapps-app-about-popup" data-overlay-theme="a" data-theme="a" data-dismissible="false" class="hyapps-app-popup-box" style="max-width:400px;">
+				<div data-role="header" data-theme="a">
+					<h1>about section Settings</h1>
+				</div>
+				<div role="main" class="ui-content">
+					<!-- <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a> -->
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+					<form>
+						<fieldset data-role="controlgroup">
+							<legend>about Options</legend>
+							<label for="select-native-5">Select one</label>
+							<select name="select-native-5" id="select-native-5" data-mini="true">
+								<option value=""></option>
+								<option value="VV1">lorem ipsum</option>
+								<option value="EIN">option 1</option>
+								<option value="AFL">option 2</option>
+								<option value="AMX">option 3</option>
+								<option value="BER">option 4</option>
+								<option value="ROU">option 5</option>
+								<option value="AEA">option 6</option>
+							</select>
+						</fieldset>
+						<label for="slider-1" class="hyapps-top20">Date range (in weeks)</label>
+						<input type="range" name="slider-1" id="slider-1" min="0" max="6" value="2">
+						<div class="hyapps-app-center hyapps-top15">
+							<a href="#hyapps-page-1-app-homepage" data-role="button" data-theme="a" data-inline="true" data-mini="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class=" ui-btn ui-shadow ui-btn-corner-all ui-mini ui-btn-inline ui-btn-up-a">
+								<span class="ui-btn-inner ui-btn-corner-all ">
+									<span class="ui-btn-text">Go</span>
+								</span>
+							</a>
+						</div>
+						<!--end button-->
+					</form>
+					<!--end range slider-->
+				</div>
+			</div>
+		</div>
+		<!--end panel right-->
+		<div data-role="header" data-position="fixed" data-fullscreen="false">
+			<a href="#hyapps-app-about-panel-left" class="ui-btn ui-icon-bars ui-btn-icon-left ui-shadow ui-corner-all ui-btn-icon-notext"></a>
+			<a href="#hyapps-app-about-panel-right" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-icon-notext ui-icon-gear" data-rel="popup" data-position-to="window"></a>
+		</div>
+		<!--end header-->
+		<div data-role="main" class="hyapps-app-padding-sm">
+			<div class="swiper-about-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" id="about-chart-box-1">
+						<div class="ui-body ui-body-a ui-corner-all hyapps-app-center hyapps-app-chart-box">
+							<div class="hyapps-app-chart-heading-box">
+								<div class="hyapps-app-chart-heading">
+									<h3>some text
+										<span class="hyapps-text-sm hyapps-app-padding-sm">some text</span>
+									</h3>
+								</div><!--end heading-->
+								<div class="hyapps-app-setting-icon">
+									<!-- <img src="images/gear_red_opt.png" alt="" /> -->
+
+									<a href="#hyapps-app-chart-checkbox" data-role="" data-rel="popup" ><img src="images/gear_red_opt.png" alt="" /></a>
+									<div id="hyapps-app-chart-checkbox" data-role="popup" data-transition="slidedown" class="hyapps-app-chart-checkbox hyapps-app-white-bg" data-corners="false">
+										<div class="ui-field-contain">
+											<fieldset data-role="controlgroup" data-corners="false">
+												<input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom">
+												<label for="checkbox-1a">text 1</label>
+
+												<input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom">
+												<label for="checkbox-2a">text 2</label>
+
+												<input type="checkbox" name="checkbox-3a" id="checkbox-3a" class="custom">
+												<label for="checkbox-3a">text 3</label>
+
+												<input type="checkbox" name="checkbox-4a" id="checkbox-4a" class="custom">
+												<label for="checkbox-4a">text 4</label>
+											</fieldset>
+										</div><!--end ui field contain-->
+									</div>	<!--end checkbox-->
+								</div>
+							</div><!--end chart heading-->
+							<div id="about-chart-1" class="hyapps-app-chart-box-content" style="min-width: 280px; height: 330px; margin: 0 auto; padding:2px"></div>
+						</div><!--end chart box-->
+					</div>
+					<!-- slide 1 ends here -->
+					<div class="swiper-slide" id="about-chart-box-2">
+						<div class="ui-body ui-body-a ui-corner-all hyapps-app-center hyapps-app-chart-box">
+							<div class="hyapps-app-chart-heading-box">
+								<div class="hyapps-app-chart-heading">
+									<h3>
+										<span class="hyapps-text-sm hyapps-app-padding-sm"></span>
+									</h3>
+								</div><!--end heading-->
+							</div><!--end chart heading-->
+							<div id="about-chart-2" class="hyapps-app-chart-box-content " style="min-width: 280px; height: 330px; margin: 0 auto; padding:2px"></div>
+						</div><!--end chart box-->
+					</div>
+					<!-- slide 2 ends here -->
+					<div class="swiper-slide" id="about-chart-box-3">
+						<div class="ui-body ui-body-a ui-corner-all hyapps-app-center hyapps-app-chart-box">
+							<div class="hyapps-app-chart-heading-box">
+								<div class="hyapps-app-chart-heading">
+									<h3>
+										<span class="hyapps-text-sm hyapps-app-padding-sm"> some text</span>
+									</h3>
+								</div><!--end heading-->
+							</div><!--end chart heading-->
+							<div id="about-chart-3" class="hyapps-app-chart-box-content" style="min-width: 280px; height: 330px; margin: 0 auto; padding:2px"></div>
+						</div><!--end chart box-->
+					</div>
+					<!-- slide 3 ends here -->
+					<div class="swiper-slide" id="about-chart-box-4">
+						<div class="ui-body ui-body-a ui-corner-all hyapps-app-center hyapps-app-chart-box">
+							<div class="hyapps-app-chart-heading-box">
+								<div class="hyapps-app-chart-heading">
+									<h3>some text
+										<span class="hyapps-text-sm hyapps-app-padding-sm"> some text</span>
+									</h3>
+								</div><!--end heading-->
+							</div><!--end chart heading-->
+							<div id="about-chart-4" class="hyapps-app-chart-box-content" style="min-width: 280px; height: 330px; margin: 0 auto; padding:2px"></div>
+						</div><!--end chart box-->
+					</div>
+					<!-- slide 4 ends here -->
+				</div><!--swipe wrapper ends here-->
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+			</div><!--swipe container ends here-->
+		</div><!--main ends here-->
+	</div>
+	<!--end about homepage page-->
+
+	<div data-role="page" id="hyapps-app-products-homepage" data-title="products section" class="hyapps-header-default  hyapps-footer-default hyapps-app-page hyapps-app-font-normal">
+		<div data-role="panel" id="hyapps-app-products-panel-left" class="hyapps-app-panel-left hyapps-no-border" data-display="overlay" data-theme="a" data-position-fixed="true" data-swipe-close="true" data-position="left">
+
+		</div>
+		<!--end panel-->
+		<div data-role="panel" id="hyapps-app-products-panel-right" class="ui-panel-content-wrap-position-right hyapps-app-panel-right" data-display="overlay" data-position="right">
+			<ul data-role="listview">
+				<li data-icon="delete"><a href="#hyapps-app-products-homepage" data-rel="close" class="hyapps-app-panel-header">Close</a></li>
+				<li data-iconpos="left"><a href="#hyapps-app-products-popup" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-btn-icon-left ui-icon-carat-l">products Settings</a></li>
+				<div class="hyapps-page-list"></div><!--dynamic list of pages-->
+			</ul>
+			<div data-role="popup" id="hyapps-app-products-popup" data-overlay-theme="a" data-theme="a" data-dismissible="false" class="hyapps-app-popup-box" style="max-width:400px;">
+				<div data-role="header" data-theme="a">
+					<h1>products section Settings</h1>
+				</div><!--end header-->
+				<div role="main" class="ui-content">
+					<!-- <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a> -->
+					<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+					<form>
+						<fieldset data-role="controlgroup">
+							<legend>about Options</legend>
+							<label for="select-native-5">Select one</label>
+							<select name="select-native-5" id="select-native-5" data-mini="true">
+								<option value=""></option>
+								<option value="VV1">lorem ipsum</option>
+								<option value="EIN">option 1</option>
+								<option value="AFL">option 2</option>
+								<option value="AMX">option 3</option>
+								<option value="BER">option 4</option>
+								<option value="ROU">option 5</option>
+								<option value="AEA">option 6</option>
+							</select>
+						</fieldset>
+						<label for="slider-1" class="hyapps-top20">Date range (in weeks)</label>
+						<input type="range" name="slider-1" id="slider-1" min="0" max="6" value="2">
+						<div class="hyapps-app-center hyapps-top15">
+							<a href="#hyapps-page-1-app-homepage" data-role="button" data-theme="a" data-inline="true" data-mini="true" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" class=" ui-btn ui-shadow ui-btn-corner-all ui-mini ui-btn-inline ui-btn-up-a">
+								<span class="ui-btn-inner ui-btn-corner-all ">
+									<span class="ui-btn-text">Go</span>
+								</span>
+							</a>
+						</div>
+						<!--end button-->
+					</form>
+					<!--end range slider-->
+				</div><!--end main-->
+			</div><!--end popup-->
+		</div>
+		<!--end panel right-->
+		<div data-role="header" data-position="fixed" data-fullscreen="false">
+			<a href="#hyapps-app-products-panel-left" class="ui-btn ui-icon-bars ui-btn-icon-left ui-shadow ui-corner-all ui-btn-icon-notext"></a>
+
+			<a href="#hyapps-app-products-panel-right" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-icon-notext ui-icon-gear" data-rel="popup" data-position-to="window"></a>
+
+		</div>
+		<!--end header-->
+		<div data-role="main" class="hyapps-app-padding-sm">
+			<div class="swiper-products-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" id="products-chart-box-1">
+						<div class="ui-body ui-body-a ui-corner-all hyapps-app-center hyapps-app-chart-box">
+							<div class="hyapps-app-chart-heading-box">
+								<div class="hyapps-app-chart-heading">
+									<h3>some text
+										<span class="hyapps-text-sm hyapps-app-padding-sm">some text</span>
+									</h3>
+								</div><!--end heading-->
+								<div class="hyapps-app-setting-icon">
+									<!-- <img src="images/gear_red_opt.png" alt="" /> -->
+
+									<a href="#hyapps-app-chart-checkbox" data-role="" data-rel="popup" ><img src="images/gear_red_opt.png" alt="" /></a>
+									<div id="hyapps-app-chart-checkbox" data-role="popup" data-transition="slidedown" class="hyapps-app-chart-checkbox hyapps-app-white-bg" data-corners="false">
+										<div class="ui-field-contain">
+											<fieldset data-role="controlgroup" data-corners="false">
+												<input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom">
+												<label for="checkbox-1a">text 1</label>
+
+												<input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom">
+												<label for="checkbox-2a">text 2</label>
+
+												<input type="checkbox" name="checkbox-3a" id="checkbox-3a" class="custom">
+												<label for="checkbox-3a">text 3</label>
+
+												<input type="checkbox" name="checkbox-4a" id="checkbox-4a" class="custom">
+												<label for="checkbox-4a">text 4</label>
+											</fieldset>
+										</div><!--end ui field contain-->
+									</div>	<!--end checkbox-->
+								</div>
+							</div><!--end chart heading-->
+							<div id="products-chart-1" class="hyapps-app-chart-box-content" style="min-width: 280px; height: 330px; margin: 0 auto; padding:2px"></div>
+						</div><!--end chart box-->
+					</div>
+					<!-- slide 1 ends here -->
+					<div class="swiper-slide" id="products-chart-box-2">
+						<div class="ui-body ui-body-a ui-corner-all hyapps-app-center hyapps-app-chart-box">
+							<div class="hyapps-app-chart-heading-box">
+								<div class="hyapps-app-chart-heading">
+									<h3>some text
+										<span class="hyapps-text-sm hyapps-app-padding-sm">some text</span>
+									</h3>
+								</div><!--end heading-->
+							</div><!--end chart heading-->
+							<div id="products-chart-2" class="hyapps-app-chart-box-content " style="min-width: 280px; height: 330px; margin: 0 auto; padding:2px"></div>
+						</div><!--end chart box-->
+					</div>
+					<!-- slide 2 ends here -->
+					<div class="swiper-slide" id="products-chart-box-3">
+						<div class="ui-body ui-body-a ui-corner-all hyapps-app-center hyapps-app-chart-box">
+							<div class="hyapps-app-chart-heading-box">
+								<div class="hyapps-app-chart-heading">
+									<h3>
+										<span class="hyapps-text-sm hyapps-app-padding-sm"> some text</span>
+									</h3>
+								</div><!--end heading-->
+							</div><!--end chart heading-->
+							<div id="products-chart-3" class="hyapps-app-chart-box-content" style="min-width: 280px; height: 330px; margin: 0 auto; padding:2px"></div>
+						</div><!--end chart box-->
+					</div>
+					<!-- slide 3 ends here -->
+					<div class="swiper-slide" id="products-chart-box-4">
+						<div class="ui-body ui-body-a ui-corner-all hyapps-app-center hyapps-app-chart-box">
+							<div class="hyapps-app-chart-heading-box">
+								<div class="hyapps-app-chart-heading">
+									<h3>some text
+										<span class="hyapps-text-sm hyapps-app-padding-sm"> some text</span>
+									</h3>
+								</div><!--end heading-->
+							</div><!--end chart heading-->
+							<div id="products-chart-4" class="hyapps-app-chart-box-content" style="min-width: 280px; height: 330px; margin: 0 auto; padding:2px"></div>
+						</div><!--end chart box-->
+					</div>
+					<!-- slide 4 ends here -->
+				</div><!--swipe wrapper ends here-->
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+			</div><!--swipe container ends here-->
+		</div>
+		<!--end main-->
+
+	</div>
+	<!--end products homepage page-->
+
+	<div data-role="page" id="hyapps-app-financialReport-homepage" class="demo-page hyapps-header-default  hyapps-footer-default hyapps-app-page hyapps-app-font-normal" data-dom-cache="true" data-theme="a" data-prev="prev" data-next="next" data-url="" data-title="contact">
+		<div data-role="panel" id="hyapps-app-financialReport-panel-right" class="ui-panel-content-wrap-position-right hyapps-app-panel-right" data-display="overlay" data-position="right">
+			<ul data-role="listview">
+				<li data-icon="delete"><a href="#hyapps-app-financialReport-homepage" data-rel="close" class="hyapps-app-panel-header">Close</a></li>
+				<div class="hyapps-page-list"></div><!--dynamic list of pages-->
+			</ul>
+		</div>
+		<!--end panel right-->
+		<div data-role="header" data-position="fixed" data-fullscreen="false">
+			<a href="#hyapps-app-financialReport-panel-right" class="ui-btn ui-btn-right ui-btn-icon-right ui-corner-all ui-shadow ui-btn-inline ui-btn-icon-notext ui-icon-gear" data-rel="popup" data-position-to="window"></a>
+		</div>
+		<!--end header-->
+		<div role="main" class="ui-content">
+			<div class="ui-body ui-body-a ui-corner-all hyapps-app-center hyapps-app-width">
+				<h3>contact</h3>
+
+			</div><!--ui-body-->
+			<div data-role="popup" id="hyapps-app-financialreport-popup" class="hyapps-app-overflow-popup" data-overlay-theme="b" data-theme="b" data-corners="false">
+				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+				<img class="popphoto" src="" alt=""><br/>
+				<img class="popphoto" src="" alt="">
+			</div><!--end popup-->
+		</div><!-- /content -->
+	</div>
+	<!--end financial reports homepage page-->
+
+
+	<script src="js/script.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/swiper.jquery.min.js"></script>
+	<script>
+	// $( document ).on( "mobileinit", function() {
+	// var swiper;
+
+	</script>
+
+</body>
+
+</html>
